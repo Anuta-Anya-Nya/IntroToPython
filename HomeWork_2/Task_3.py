@@ -3,8 +3,8 @@
 n = int(input())
 list_number = []
 sum = 0
-for i in range(n):
-    result = int((1+1/n)**n)
+for i in range(1, n+1):
+    result = round((1+1/i)**i)
     list_number.append(result)
     sum += result
 print(list_number, sum)
