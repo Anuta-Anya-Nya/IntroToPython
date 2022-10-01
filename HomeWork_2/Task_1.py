@@ -6,7 +6,7 @@ number = float(input())
 length_number = len(str(number))
 number = int(number*10**(length_number-2))
 sum = 0
-while number > 0:
+while number > 0:  # while number:
     sum += number % 10
     number = number//10
 print(sum)

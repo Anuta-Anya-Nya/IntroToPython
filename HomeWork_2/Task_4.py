@@ -8,12 +8,19 @@
 first_pos = int(input())
 second_pos = int(input())
 number = int(input())
-list_numbers = []
-list_length = number*2+1
-if first_pos < 1 or second_pos < 1 or first_pos > list_length or second_pos > list_length:
-    print('Error!')
-else:
-    for i in range(-number, number+1):
-        list_numbers.append(i)
-    print(list_numbers)
+# list_numbers = []
+# list_length = number*2+1
+# if first_pos < 1 or second_pos < 1 or first_pos > list_length or second_pos > list_length:
+#     print('Error!')
+# else:
+#     for i in range(-number, number+1):
+#         list_numbers.append(i)
+#     print(list_numbers)
+#     print(list_numbers[first_pos-1]*list_numbers[second_pos-1])
+list_numbers = list(range(-number, number+1))
+print(list_numbers)
+len_list = len(list_numbers)
+if 0 < first_pos <= len_list and 0 < first_pos <= len_list:
     print(list_numbers[first_pos-1]*list_numbers[second_pos-1])
+else:
+    print('Error!')
