@@ -12,7 +12,6 @@ def find_minim_maxim(number):
             numbers_list.append(num)
             new_list.append(round(num-int(num), 2))
         print(numbers_list)
-        print(new_list)
         print(round(max(new_list)-min(new_list), 2))
     else:
         print("Error!")
