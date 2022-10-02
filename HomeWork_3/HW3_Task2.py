@@ -10,7 +10,7 @@ def find_multiple(number):
         new_list = []
         for i in range(0, number//2):
             new_list.append(numbers_list[i]*numbers_list[number-1-i])
-        if number % 2 != 0:
+        if number % 2:
             new_list.append(numbers_list[number//2])
         print(new_list)
     else:
