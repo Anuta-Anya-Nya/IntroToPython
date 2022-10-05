@@ -6,7 +6,7 @@ def convert_to_2(number):
         while number > 0:
             some_list.insert(0, number % 2)
             number = number//2
-        print(''.join(map(str, some_list)))
+        print(''.join(map(str, some_list)))  # print(*some_list, sep="")
     else:
         print("Error!")
 

@@ -10,6 +10,7 @@ def find_minim_maxim(number):
         for i in range(number):
             num = round(uniform(1, 10), 2)
             numbers_list.append(num)
+            # num%1 отбивает целую часть
             new_list.append(round(num-int(num), 2))
         print(numbers_list)
         print(round(max(new_list)-min(new_list), 2))
