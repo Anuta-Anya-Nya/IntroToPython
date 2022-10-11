@@ -11,7 +11,7 @@ def find_prime_factors(num):
             if not num % i:
                 if i == 2:
                     list_prime_factors.append(i)
-                    num = num // i
+                    num = num // i  # num //=i
                     break
                 else:
                     for k in range(2, i):

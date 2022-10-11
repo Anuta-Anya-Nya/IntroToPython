@@ -10,3 +10,7 @@ def round_number(number, d):
 
 print(round_number(input("Enter a real number: "),
       input("Enter the required accuracy: ")))
+
+#num=float(input('Enter a real number'))
+#accu=input(('введите округление:'))
+# print(f"{num:.{len(accu)}f}")
