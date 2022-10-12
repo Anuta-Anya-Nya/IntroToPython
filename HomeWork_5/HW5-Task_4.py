@@ -46,7 +46,7 @@ def game_persons(candies, person):
 
 def play_the_game_human():
     person = who_first()
-    candies = 107
+    candies = 2021
     print(f'На столе {candies} конфет.')
     while candies > 0:
         candies = game_persons(candies, person)
@@ -94,7 +94,7 @@ def game_bot(candies, person):
 
 def play_the_game_bot():
     person = who_first_bot()
-    candies = 107
+    candies = 2021
     print(f'На столе {candies} конфет.')
     while candies > 0:
         candies = game_bot(candies, person)
