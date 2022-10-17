@@ -10,8 +10,9 @@ from random import randint
 def create_list(n):
     lst = [randint(1, n*3) for i in range(n)]
     print(lst)
-    new_list = [lst[i] for i in range(1, len(lst)) if lst[i] > lst[i-1]]
-    return new_list
+    return [lst[i] for i in range(1, len(lst)) if lst[i] > lst[i-1]]
+
+# return [num for i, num in enumerate(original_list[1:]) if num > original_list[i]]
 
 
 print(create_list(9))

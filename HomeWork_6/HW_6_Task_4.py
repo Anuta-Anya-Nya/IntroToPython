@@ -36,3 +36,11 @@ def create_dict(*str):
 
 print(create_dict("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов",
       "Анна Савельева", "Юнона Ветрякова", "Борис Аркадьев", "Антон Серов", "Павел Анисимов"))
+
+
+def create_dict2(*args):
+    n_s_sort = {}
+    for n_s in args:
+        n_s_sort.setdefault(n_s.split()[1][0], {}).setdefault(
+            n_s.split()[0][0], []).append(n_s)
+    return n_s_sort

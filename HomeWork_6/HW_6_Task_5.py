@@ -34,3 +34,23 @@ def create_joke(n, replay=True):
 
 
 print(create_joke(10))
+
+nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
+adverbs = ["сегодня", "вчера", "завтра",
+           "позавчера", "ночью", "когда-то", "где-то"]
+adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
+
+
+def create_joke(n, replay=False):
+    # делаем копии списков для удаления
+    no, adv, adj = nouns.copy(), adverbs.copy(), adjectives.copy()
+    list_of_j = []
+    list_min = min(no, adv, adj)  # находим список с минимальной длиой
+
+    while n and list_min:
+        num = randrange(len(list_min))
+        # Сразу в аппенд можно передать условие. pop удаляет и возвращает удаленное
+        list_of_j.append(f"{no.pop(num)} {adv.pop(num)} {adj.pop(num)}" if repeat
+                         else f"{choice(nouns)} {choice(adverbs)} {choice(adjectives)}")  # choice дергает любое значение, тк не удаляет, то можно из исходных списков
+        n -= 1
+    return list_of_j
