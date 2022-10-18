@@ -41,5 +41,8 @@ def info_for_convert():
     file_name = input("Введите имя файла который необходимо конвертировать: ")
     while not chek.format_file(file_name):
         file_name = input("Неверный формат файла, посторите ввод: ")
-    form = input("Введите формат для конвертации (без точки): ")
+    form = input("Введите формат для конвертации (txt или csv): ")
+    while not chek.format_file_conv(form):
+        form = input("Неверный формат файла, посторите ввод: ")
+
     return file_name, form

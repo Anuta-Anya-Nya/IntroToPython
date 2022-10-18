@@ -7,7 +7,15 @@ def convert_file():
     if path.exists(file_name):
         with open(file_name, 'r', encoding="utf-8") as file, \
                 open(f"{file_name[:-4]}.{form}", 'w', encoding="utf-8") as r_file:
-            for line in file:
-                r_file.write(line)
+            if form == file_name[-3:]:
+                print("Нельзя конвертировать в исходный формат!")
+            else:
+                for line in file:
+                    if form == "txt" and file_name[-3:] == "csv":
+                        r_file.write(' '.join(line.strip().split(';'))+"\n")
+                        print('csv in txt')
+                    else:
+                        r_file.write(';'.join(line.strip().split()) + "\n")
+                        print('txt in csv')
     else:
         print("Файл для конвертации отсутствует")

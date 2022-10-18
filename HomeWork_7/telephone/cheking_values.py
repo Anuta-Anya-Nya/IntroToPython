@@ -12,7 +12,7 @@ def cheking_menu(value):
 
 
 def format_file(value):
-    if value[-4] == '.':
+    if value[-4:] == '.txt' or value[-4:] == '.csv':
         return True
     else:
         return False
@@ -20,3 +20,10 @@ def format_file(value):
 
 def cheking_tel(value):
     return value.isdigit()
+
+
+def format_file_conv(value):
+    if value == 'txt' or value == 'csv':
+        return True
+    else:
+        return False
