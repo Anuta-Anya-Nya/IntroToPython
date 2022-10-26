@@ -4,6 +4,7 @@ from random import randint
 from telegram import Update
 from telegram.ext import filters, MessageHandler, ApplicationBuilder, CommandHandler, ContextTypes, ConversationHandler
 
+
 # настроим модуль ведения журнала логов
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -120,7 +121,7 @@ async def play_game(update, context):
 
 
 if __name__ == '__main__':
-    TOKEN = '5608687961:AAGuhd3AEfSCjyrz39VDVTKf4du6yh_8Nk4'
+    TOKEN = ''
 
     application = ApplicationBuilder().token(TOKEN).build()
 
