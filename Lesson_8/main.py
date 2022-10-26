@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from bot_commands import *
 
 app = ApplicationBuilder().token(
-    "5608687961:AAGuhd3AEfSCjyrz39VDVTKf4du6yh_8Nk4").build()
+    TOKEN).build()
 
 # когда присылается "hi" команда, выполняется метод hi_command
 app.add_handler(CommandHandler("hi", hi_command))
